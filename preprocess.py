@@ -19,8 +19,8 @@ def read_process_img(img_path):
     # try different hyper parameters for face detection and combine the best results.
 
     # faces = face_cascade.detectMultiScale(img, 1.3, 5)
-    faces = face_cascade.detectMultiScale(img, 1.1, 3)
-    # faces = face_cascade.detectMultiScale(img, 1.3, 3)
+    # faces = face_cascade.detectMultiScale(img, 1.1, 3)
+    faces = face_cascade.detectMultiScale(img, 1.3, 3)
     for (x, y, w, h) in faces:
         img = img[y:y + h, x:x + w]
         break
@@ -93,3 +93,10 @@ for filename in txt_filenames:
     total +=1
 print(total)
 
+os.rename('./CK+/1', './CK+/anger')
+os.rename('./CK+/2', './CK+/contempt')
+os.rename('./CK+/3', './CK+/disgust')
+os.rename('./CK+/4', './CK+/fear')
+os.rename('./CK+/5', './CK+/happy')
+os.rename('./CK+/6', './CK+/sadness')
+os.rename('./CK+/7', './CK+/surprise')
