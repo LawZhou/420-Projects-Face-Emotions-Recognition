@@ -80,16 +80,10 @@ i = np.argmax(accuracies)
 print("k=%d achieved highest accuracy of %.2f%% on validation data" % (kVals[i],
                                                                        accuracies[i] * 100))
 
-# re-train our classifier using the best k value and predict the labels of the
-# test data
-
-model = KNeighborsClassifier(n_neighbors=kVals[i])
-model.fit(trainData, trainLabels)
-
 model = best_model
 
-dump(model, '/knn_models/knn_model.joblib')
-model = load('/knn_models/knn_model.joblib')
+dump(model, 'knn_model.joblib')
+model = load('knn_model.joblib')
 
 
 
