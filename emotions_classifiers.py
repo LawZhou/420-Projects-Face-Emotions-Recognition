@@ -220,7 +220,7 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(device)
 
-    num_epochs = 2
+    num_epochs = 20
     train_batch_size = 128
     test_batch_size = 50
     learn_rate = 0.001

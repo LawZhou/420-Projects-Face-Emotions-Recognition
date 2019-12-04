@@ -42,11 +42,11 @@ Run **evaluate.py**. The confusion matrix will show up. The current model has a 
 
 # How to train you own model:
 
-1. Run **preprocess.py**. A new folder CK+ will be generated, with 7 folder corresponds to each type of emotions. 
+1. Run **preprocess.py**. A new folder CK+ will be generated, with 7 folders corresponds to each type of emotions. 
 2. Run **preprocess_ck.py**. The image is now shuffled and saved into numpy files.
 3. In **feature_extraction.py**, uncomment the line 273 and 274.
 4. Run **feature_extraction.py**. This is the K-Fold Cross Validation. 35 models will be trained, and the number of incorrect predictions on each training set image will be count, in order to classify images into **Easy** and **Hard**. This step will take about 10 mins.
 5. Run **knn.py**. This will train a knn classifier to classify if each image is hard or easy. It is better to rerun it mulitiple times and pick a knn classifier with the max testing accuracy. 
 6. A file **knn_model.joblib** will be generated. Copy it into the folder **knn_models**, rename it to **knn_model_final.joblib**.
-7.  In **emotion_classifers.py**, change the value of the variable num_epochs on line 223 to a larger number, for example, 20. Run **emotion_classifers.py** to train the final model.
+7. Run **emotion_classifers.py** to train the final model.
 8. Run **evaluate.py** to evaluate the new model.
