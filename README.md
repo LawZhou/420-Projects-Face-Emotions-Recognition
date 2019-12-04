@@ -13,7 +13,7 @@ GeForce GTX 1080 Ti 11GB
 ##  Runtime Environment: 
 Python 3.7 (Anaconda 2019.10)
 
-### reauired packages:
+### required packages:
 * numpy 1.17.4
 * joblib 0.14.0
 * torch 1.3.1
