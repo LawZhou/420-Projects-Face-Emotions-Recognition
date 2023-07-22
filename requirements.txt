@@ -12,7 +12,7 @@ scikit-learn==0.24.0
 scipy==1.6.0
 six==1.15.0
 threadpoolctl==2.1.0
-torch==1.7.1+cu110
+torch==1.13.1
 torchaudio==0.7.2
 torchvision==0.8.2+cu110
 typing-extensions==3.7.4.3
